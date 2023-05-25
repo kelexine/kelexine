@@ -1,5 +1,5 @@
 # 💫 About Me:
-Myself 
+Just a random developer looking to enhance his skills and looking to help in the open source world.
 
 
 ## 🌐 Socials:
@@ -18,8 +18,9 @@ Myself
 ## 🐦 Latest Tweet
 [![](https://gtce.itsvg.in/api?username=KelechiOnogwu)](https://github.com/VishwaGauravIn/github-twitter-card-embed)
 
-### ✍️ Random Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+### ✍️ Dev Quote
+One main'scrappy software is another man's full time job.
+
 
 ### 🔝 Top Contributed Repo
 ![](https://github-contributor-stats.vercel.app/api?username=Kelexine&limit=5&theme=dark&combine_all_yearly_contributions=true)
