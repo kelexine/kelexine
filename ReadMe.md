@@ -17,19 +17,9 @@ Just a random developer looking to enhance his skills and looking to help in the
 [![](https://gtce.itsvg.in/api?username=KelechiOnogwu)](https://github.com/VishwaGauravIn/github-twitter-card-embed)
 
 ### ✍️ Dev Quote
-One man'scrappy software is another man's full time job.
+One man's crappy software is another man's full time job.
 
-
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=Kelexine&limit=5&theme=dark&combine_all_yearly_contributions=true)
-
-### 😂 Random Dev Meme
-<img src="https://rm.up.railway.app/" width="512px"/>
-
----
-[![](https://visitcount.itsvg.in/api?id=Kelexine&icon=0&color=0)](https://visitcount.itsvg.in)
-
-  ## 💰 You can help me by Buying me a coffee
+## 💰 You can help me by Buying me a coffee
   [![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/Kelexine) 
 
  
