@@ -1,7 +1,6 @@
 # 💫 About Me:
 Just a random developer looking to enhance his skills and looking to help in the open source world.
 
-
 ## 🌐 Socials:
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/KelechiOnogwu) 
 
@@ -12,9 +11,6 @@ Just a random developer looking to enhance his skills and looking to help in the
 
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=Kelexine&theme=radical&no-frame=false&no-bg=true&margin-w=4)
-
-## 🐦 Latest Tweet
-[![](https://gtce.itsvg.in/api?username=KelechiOnogwu)](https://github.com/VishwaGauravIn/github-twitter-card-embed)
 
 ### ✍️ Dev Quote
 One man's crappy software is another man's full time job.
