@@ -1,5 +1,5 @@
 # 💫 About Me:
-Just a random developer looking to enhance his skills and looking to help in the open source world.
+Just a random developer his thing
 
 ## 🌐 Socials:
 [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/KelechiOnogwu) 
