@@ -3,13 +3,15 @@
 
 <p align="left"> <a href="https://twitter.com/kelechionogwu" target="blank"><img src="https://img.shields.io/twitter/follow/kelechionogwu?logo=twitter&style=for-the-badge" alt="kelechionogwu" /></a> </p>
 
-- 🔭 I’m currently working on **PearOS**
+- 🔭 I’m currently working on [PearOS](https://github.com/TeamPear-OS-Project)
 
 - 🌱 I’m currently learning **C, C++, Java and Python**
 
 - 👨‍💻 All of my projects are available at [https://github.com/kelexine](https://github.com/kelexine)
 
 - 📫 How to reach me **frankiekelechi@gmail.com**
+
+- ⚡ Fun fact **One Man's crappy software is another Man's Job**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
