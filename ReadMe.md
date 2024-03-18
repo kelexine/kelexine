@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Franklin Kelechi</h1>
+<h1 align="center">Hi There 👋, I'm Franklin Kelechi</h1>
 <h3 align="center">An Android developer from Nigeria</h3>
 
 <p align="left"> <a href="https://twitter.com/kelechionogwu" target="blank"><img src="https://img.shields.io/twitter/follow/kelechionogwu?logo=twitter&style=for-the-badge" alt="kelechionogwu" /></a> </p>
@@ -7,7 +7,7 @@
 
 - 🌱 I’m currently learning **C, C++, Java and Python**
 
-- 👨‍💻 All of my projects are available at [https://github.com/kelexine](https://github.com/kelexine)
+- 👨‍💻 All of my projects are available [here](https://github.com/kelexine?tab=repositories)
 
 - 📫 How to reach me **frankiekelechi@gmail.com**
 
