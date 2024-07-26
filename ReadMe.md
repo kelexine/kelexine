@@ -3,7 +3,7 @@
 
 <p align="left"> <a href="https://twitter.com/kelechionogwu" target="blank"><img src="https://img.shields.io/twitter/follow/kelechionogwu?logo=twitter&style=for-the-badge" alt="kelechionogwu" /></a> </p>
 
-- 🔭 I’m currently working on [PearOS](https://github.com/TeamPear-OS-Project)
+- 🔭 I’m currently working on [PearOS]([https://github.com/ProjectPearOS])
 
 - 🌱 I’m currently learning **C, C++, Java and Python**
 
