@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franklin Kelechi | Android Developer</title>
+    <style>
+        :root {
+            --primary: #0a192f;
+            --secondary: #64ffda;
+            --text: #ccd6f6;
+            --text-secondary: #8892b0;
+            --accent: #ff5277;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Courier New', monospace;
+        }
+        
+        body {
+            background-color: var(--primary);
+            color: var(--text);
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 25px 25px, rgba(100, 255, 218, 0.15) 2px, transparent 0),
+                radial-gradient(circle at 75px 75px, rgba(100, 255, 218, 0.1) 2px, transparent 0);
+            background-size: 100px 100px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.9));
+            z-index: -1;
+        }
+        
+        .glitch-wrapper {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .glitch {
+            font-size: 5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 0.05em 0 0 var(--accent), -0.05em 0 0 var(--secondary);
+            animation: glitch 2s infinite;
+        }
+        
+        @keyframes glitch {
+            0% {
+                text-shadow: 0.05em 0 0 var(--accent), -0.05em 0 0 var(--secondary);
+            }
+            14% {
+                text-shadow: 0.05em 0 0 var(--accent), -0.05em 0 0 var(--secondary);
+            }
+            15% {
+                text-shadow: -0.05em -0.025em 0 var(--accent), 0.025em 0.05em 0 var(--secondary);
+            }
+            49% {
+                text-shadow: -0.05em -0.025em 0 var(--accent), 0.025em 0.05em 0 var(--secondary);
+            }
+            50% {
+                text-shadow: 0.025em 0.05em 0 var(--accent), -0.05em -0.025em 0 var(--secondary);
+            }
+            99% {
+                text-shadow: 0.025em 0.05em 0 var(--accent), -0.05em -0.025em 0 var(--secondary);
+            }
+            100% {
+                text-shadow: 0.05em 0 0 var(--accent), -0.05em 0 0 var(--secondary);
+            }
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            color: var(--text-secondary);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-30px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+        }
+        
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2:after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--secondary);
+            margin-left: 1rem;
+            opacity: 0.3;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        
+        .about-stats {
+            background: rgba(100, 255, 218, 0.05);
+            border-radius: 10px;
+            padding: 2rem;
+            border: 1px solid var(--secondary);
+        }
+        
+        .stat-item {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .stat-item .label {
+            color: var(--text);
+        }
+        
+        .stat-item .value {
+            color: var(--secondary);
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .tech-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
+        }
+        
+        .tech-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+        
+        .tech-item span {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 1.5rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        
+        .project-card:hover {
+            border-color: var(--secondary);
+        }
+        
+        .project-card:hover:before {
+            transform: scaleX(1);
+        }
+        
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        .project-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .project-card .tag {
+            padding: 0.3rem 0.6rem;
+            background: rgba(100, 255, 218, 0.1);
+            color: var(--secondary);
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        .contact-item .details {
+            flex: 1;
+        }
+        
+        .contact-item .label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-item .value {
+            color: var(--text);
+        }
+        
+        .contact-form {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 2rem;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            color: var(--text);
+            font-family: inherit;
+            resize: none;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+        
+        button {
+            padding: 1rem 2rem;
+            background: transparent;
+            color: var(--secondary);
+            border: 1px solid var(--secondary);
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+        
+        button:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: var(--secondary);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1) translate(-50%, -50%);
+            transform-origin: 50% 50%;
+        }
+        
+        button:focus:not(:active):after {
+            animation: ripple 1s ease-out;
+        }
+        
+        @keyframes ripple {
+            0% {
+                transform: scale(0) translate(-50%, -50%);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(20) translate(-50%, -50%);
+                opacity: 0;
+            }
+        }
+        
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Terminal effect */
+        .terminal {
+            background: rgba(10, 25, 47, 0.9);
+            border-radius: 10px;
+            border: 1px solid var(--secondary);
+            padding: 1.5rem;
+            font-family: 'Courier New', monospace;
+            color: var(--text);
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .terminal:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: rgba(100, 255, 218, 0.1);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        
+        .terminal:after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            width: 12px;
+            height: 12px;
+            background: #ff5f56;
+            border-radius: 50%;
+            box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+        }
+        
+        .terminal-content {
+            margin-top: 30px;
+            line-height: 1.6;
+        }
+        
+        .terminal-prompt {
+            color: var(--secondary);
+        }
+        
+        .blinking-cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background: var(--secondary);
+            margin-left: 5px;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+        
+        /* Neon glow effect */
+        .neon-text {
+            color: var(--text);
+            text-shadow: 0 0 5px var(--secondary),
+                        0 0 10px var(--secondary),
+                        0 0 20px var(--secondary),
+                        0 0 40px var(--secondary);
+            animation: neon 1.5s infinite alternate;
+        }
+        
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 5px var(--secondary),
+                            0 0 10px var(--secondary),
+                            0 0 20px var(--secondary),
+                            0 0 40px var(--secondary);
+            }
+            to {
+                text-shadow: 0 0 2px var(--secondary),
+                            0 0 5px var(--secondary),
+                            0 0 10px var(--secondary),
+                            0 0 20px var(--secondary);
+            }
+        }
+        
+        /* Hologram effect */
+        .hologram {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hologram:before,
+        .hologram:after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+        }
+        
+        .hologram:before {
+            color: #ff00cc;
+            z-index: -1;
+            animation: hologram1 6s infinite;
+        }
+        
+        .hologram:after {
+            color: #00ffff;
+            z-index: -2;
+            animation: hologram2 4s infinite;
+        }
+        
+        @keyframes hologram1 {
+            0%, 100% {
+                transform: translate(-2px, -2px);
+            }
+            50% {
+                transform: translate(2px, 2px);
+            }
+        }
+        
+        @keyframes hologram2 {
+            0%, 100% {
+                transform: translate(2px, 2px);
+            }
+            50% {
+                transform: translate(-2px, -2px);
+            }
+        }
+        
+        /* Matrix rain effect */
+        .matrix-rain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .glitch {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                margin-top: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="matrix-rain" id="matrix-canvas"></div>
+    
+    <div class="container">
+        <header>
+            <div class="glitch-wrapper">
+                <h1 class="glitch">Franklin Kelechi</h1>
+            </div>
+            <p class="subtitle">An Android Developer from Nigeria</p>
+            <div class="terminal">
+                <div class="terminal-content">
+                    <span class="terminal-prompt">$ </span>whoami<br>
+                    > Franklin Kelechi | Android Developer | PearOS Contributor<br><br>
+                    <span class="terminal-prompt">$ </span>skills<br>
+                    > Java, C/C++, Python, Android, Linux<br><br>
+                    <span class="terminal-prompt">$ </span>contact<br>
+                    > frankiekelechi@gmail.com<br><br>
+                    <span class="terminal-prompt">$ </span>_<span class="blinking-cursor"></span>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i> Scroll Down
+            </div>
+        </header>
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm an Android Developer from Nigeria, currently focusing on <span class="neon-text">PearOS</span> development. I'm passionate about mobile development and open source contributions.</p>
+                    <p class="hologram" data-text="Currently learning C, C++, Java and Python to expand my programming skills.">Currently learning C, C++, Java and Python to expand my programming skills.</p>
+                    <p>⚡ Fun fact: <em>"One Man's crappy software is another Man's Job"</em></p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="label">Location</span>
+                        <span class="value">Nigeria</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">Focus</span>
+                        <span class="value">Android Development</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">Current Project</span>
+                        <span class="value">PearOS</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">Learning</span>
+                        <span class="value">C, C++, Java, Python</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android">
+                    <span>Android</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c">
+                    <span>C</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus">
+                    <span>C++</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java">
+                    <span>Java</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python">
+                    <span>Python</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux">
+                    <span>Linux</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5">
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3">
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                    <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp">
+                    <span>GCP</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>PearOS</h3>
+                    <p>Contributing to PearOS, an open-source project focused on creating a unique operating system experience.</p>
+                    <div class="tags">
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Android Applications</h3>
+                    <p>Various Android applications developed using Java and Kotlin.</p>
+                    <div class="tags">
+                        <span class="tag">Android</span>
+                        <span class="tag">Java</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Open Source Contributions</h3>
+                    <p>Active contributor to various open source projects.</p>
+                    <div class="tags">
+                        <span class="tag">Open Source</span>
+                        <span class="tag">Collaboration</span>
+                    </div>
+                </div>
+            </div>
+            <div class="terminal" style="margin-top: 3rem;">
+                <div class="terminal-content">
+                    <span class="terminal-prompt">$ </span>ls projects<br>
+                    > <a href="https://github.com/ProjectPearOS" style="color: var(--secondary); text-decoration: none;">PearOS/</a><br>
+                    > <a href="https://github.com/kelexine?tab=repositories" style="color: var(--secondary); text-decoration: none;">more-projects/</a><br><br>
+                    <span class="terminal-prompt">$ </span>cd projects && git clone https://github.com/kelexine<br>
+                    > Cloning into 'kelexine-projects'...<br>
+                    > Successfully cloned repository!<br>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Connect With Me</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="details">
+                            <div class="label">Email</div>
+                            <div class="value">frankiekelechi@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-twitter"></i>
+                        <div class="details">
+                            <div class="label">Twitter</div>
+                            <div class="value">@kelechionogwu</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-telegram"></i>
+                        <div class="details">
+                            <div class="label">Telegram</div>
+                            <div class="value">@kelexine2</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div class="details">
+                            <div class="label">GitHub</div>
+                            <div class="value">@kelexine</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section id="support">
+            <h2>Support My Work</h2>
+            <div style="text-align: center;">
+                <p style="margin-bottom: 2rem; color: var(--text-secondary);">If you like my work and want to support me, you can buy me a coffee!</p>
+                <a href="https://buymeacoffee.com/Kelexine" target="_blank" style="display: inline-block;">
+                    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="Buy Me A Coffee">
+                </a>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="social-links">
+                <a href="https://twitter.com/kelechionogwu" class="social-link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://t.me/kelexine2" class="social-link" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://github.com/kelexine" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:frankiekelechi@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="copyright">© 2025 Franklin Kelechi. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Matrix rain effect
+        const canvas = document.createElement('canvas');
+        canvas.id = 'matrix-canvas';
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        document.querySelector('.matrix-rain').appendChild(canvas);
+        
+        const ctx = canvas.getContext('2d');
+        const characters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        const columns = canvas.width / 20;
+        const drops = [];
+        
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.floor(Math.random() * canvas.height);
+        }
+        
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(10, 25, 47, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.fillStyle = '#64ffda';
+            ctx.font = '15px monospace';
+            
+            for (let i = 0; i < drops.length; i++) {
+                const text = characters.charAt(Math.floor(Math.random() * characters.length));
+                ctx.fillText(text, i * 20, drops[i] * 20);
+                
+                if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                
+                drops[i]++;
+            }
+        }
+        
+        setInterval(drawMatrix, 50);
+        
+        // Typing effect
+        const terminalTexts = document.querySelectorAll('.terminal-content');
+        
+        terminalTexts.forEach(terminal => {
+            const originalHTML = terminal.innerHTML;
+            terminal.innerHTML = '';
+            
+            let i = 0;
+            const typeSpeed = 20;
+            
+            function typeWriter() {
+                if (i < originalHTML.length) {
+                    terminal.innerHTML += originalHTML.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, typeSpeed);
+                }
+            }
+            
+            typeWriter();
+        });
+        
+        // Scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            
+            function checkScroll() {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (sectionTop < screenPosition) {
+                        section.style.opacity = 1;
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // Initial style
+            sections.forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(50px)';
+                section.style.transition = 'all 0.8s ease';
+            });
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkScroll);
+            
+            // Check on load
+            checkScroll();
+        });
+        
+        // Project hover effects
+        const projectCards = document.querySelectorAll('.project-card');
+        
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px)';
+                card.style.boxShadow = '0 10px 30px rgba(100, 255, 218, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = 'none';
+            });
+        });
+        
+        // Animated background
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+            
+            document.body.style.backgroundPosition = `${mouseX * 50}px ${mouseY * 50}px`;
+        });
+        
+        // GitHub stats dynamic loading
+        function loadGitHubStats() {
+            // In a real implementation, this would fetch from GitHub API
+            const statsContainer = document.querySelector('.about-stats');
+            
+            const stats = {
+                repos: 15,
+                stars: 42,
+                followers: 38,
+                contributions: 527
+            };
+            
+            // Create a new stat item
+            for (const [key, value] of Object.entries(stats)) {
+                const statItem = document.createElement('div');
+                statItem.className = 'stat-item';
+                
+                const label = document.createElement('span');
+                label.className = 'label';
+                label.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+                
+                const valueSpan = document.createElement('span');
+                valueSpan.className = 'value';
+                
+                // Animate the counter
+                let count = 0;
+                const interval = setInterval(() => {
+                    count++;
+                    valueSpan.textContent = count;
+                    
+                    if (count >= value) {
+                        clearInterval(interval);
+                    }
+                }, 2000 / value);
+                
+                statItem.appendChild(label);
+                statItem.appendChild(valueSpan);
+                statsContainer.appendChild(statItem);
+            }
+        }
+        
+        // Run after a delay to allow terminal effect to complete
+        setTimeout(loadGitHubStats, 3000);
+        
+        // Form submission handler
+        const contactForm = document.querySelector('.contact-form form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            
+            // Form validation
+            let isValid = true;
+            
+            if (!nameInput.value.trim()) {
+                highlightError(nameInput);
+                isValid = false;
+            }
+            
+            if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+                highlightError(emailInput);
+                isValid = false;
+            }
+            
+            if (!messageInput.value.trim()) {
+                highlightError(messageInput);
+                isValid = false;
+            }
+            
+            if (isValid) {
+                // In a real implementation, this would send the form data
+                const button = contactForm.querySelector('button');
+                const originalText = button.textContent;
+                
+                button.disabled = true;
+                button.textContent = 'Sending...';
+                
+                setTimeout(() => {
+                    button.textContent = 'Message Sent!';
+                    button.style.backgroundColor = 'rgba(100, 255, 218, 0.2)';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Reset button after delay
+                    setTimeout(() => {
+                        button.disabled = false;
+                        button.textContent = originalText;
+                        button.style.backgroundColor = 'transparent';
+                    }, 3000);
+                }, 1500);
+            }
+        });
+        
+        function highlightError(input) {
+            input.style.borderColor = '#ff5277';
+            
+            input.addEventListener('input', function removeError() {
+                input.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                input.removeEventListener('input', removeError);
+            });
+        }
+        
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        
+        // Add particle network background
+        class Particle {
+            constructor(canvas) {
+                this.canvas = canvas;
+                this.ctx = canvas.getContext('2d');
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = Math.random() * 0.2 - 0.1;
+                this.vy = Math.random() * 0.2 - 0.1;
+                this.radius = Math.random() * 2;
+                this.color = '#64ffda';
+            }
+            
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                
+                if (this.x < 0 || this.x > this.canvas.width) {
+                    this.vx = -this.vx;
+                }
+                
+                if (this.y < 0 || this.y > this.canvas.height) {
+                    this.vy = -this.vy;
+                }
+            }
+            
+            draw() {
+                this.ctx.beginPath();
+                this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                this.ctx.fillStyle = this.color;
+                this.ctx.globalAlpha = 0.7;
+                this.ctx.fill();
+            }
+        }
+        
+        class ParticleNetwork {
+            constructor() {
+                this.canvas = document.createElement('canvas');
+                this.canvas.width = window.innerWidth;
+                this.canvas.height = window.innerHeight;
+                this.canvas.style.position = 'fixed';
+                this.canvas.style.top = '0';
+                this.canvas.style.left = '0';
+                this.canvas.style.zIndex = '-2';
+                this.canvas.style.pointerEvents = 'none';
+                document.body.appendChild(this.canvas);
+                
+                this.ctx = this.canvas.getContext('2d');
+                this.particles = [];
+                this.particleCount = 50;
+                
+                this.init();
+                this.animate();
+                
+                window.addEventListener('resize', () => {
+                    this.canvas.width = window.innerWidth;
+                    this.canvas.height = window.innerHeight;
+                });
+            }
+            
+            init() {
+                for (let i = 0; i < this.particleCount; i++) {
+                    this.particles.push(new Particle(this.canvas));
+                }
+            }
+            
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Update and draw particles
+                this.particles.forEach(particle => {
+                    particle.update();
+                    particle.draw();
+                });
+                
+                // Draw connections
+                this.ctx.beginPath();
+                for (let i = 0; i < this.particles.length; i++) {
+                    for (let j = i + 1; j < this.particles.length; j++) {
+                        const dx = this.particles[i].x - this.particles[j].x;
+                        const dy = this.particles[i].y - this.particles[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < 100) {
+                            this.ctx.strokeStyle = '#64ffda';
+                            this.ctx.globalAlpha = 0.2 * (1 - distance / 100);
+                            this.ctx.lineWidth = 0.5;
+                            this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
+                            this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+                        }
+                    }
+                }
+                this.ctx.stroke();
+                
+                requestAnimationFrame(() => this.animate());
+            }
+        }
+        
+        // Initialize particle network after a small delay
+        setTimeout(() => {
+            new ParticleNetwork();
+        }, 1000);
+        
+        // Scroll to section on navigation click
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // GitHub contribution heat map simulation
+        function createContributionMap() {
+            const container = document.createElement('div');
+            container.style.display = 'grid';
+            container.style.gridTemplateColumns = 'repeat(52, 10px)';
+            container.style.gridGap = '2px';
+            container.style.margin = '2rem auto';
+            container.style.justifyContent = 'center';
+            
+            for (let i = 0; i < 365; i++) {
+                const cell = document.createElement('div');
+                cell.style.width = '10px';
+                cell.style.height = '10px';
+                cell.style.backgroundColor = getRandomContributionColor();
+                cell.style.borderRadius = '2px';
+                cell.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                
+                cell.addEventListener('mouseenter', () => {
+                    cell.style.transform = 'scale(1.5)';
+                    cell.style.boxShadow = '0 0 5px rgba(100, 255, 218, 0.5)';
+                });
+                
+                cell.addEventListener('mouseleave', () => {
+                    cell.style.transform = 'scale(1)';
+                    cell.style.boxShadow = 'none';
+                });
+                
+                container.appendChild(cell);
+            }
+            
+            const section = document.querySelector('#about');
+            section.appendChild(container);
+        }
+        
+        function getRandomContributionColor() {
+            const colors = [
+                'rgba(100, 255, 218, 0.1)',
+                'rgba(100, 255, 218, 0.3)',
+                'rgba(100, 255, 218, 0.5)',
+                'rgba(100, 255, 218, 0.7)',
+                'rgba(100, 255, 218, 0.9)'
+            ];
+            
+            // Weight towards lower activity for realism
+            const rand = Math.random();
+            if (rand < 0.6) return colors[0];
+            if (rand < 0.8) return colors[1];
+            if (rand < 0.9) return colors[2];
+            if (rand < 0.97) return colors[3];
+            return colors[4];
+        }
+        
+        setTimeout(createContributionMap, 3500);
+    </script>
+</body>
+</html>
