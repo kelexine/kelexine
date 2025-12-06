@@ -6,7 +6,7 @@
 
 - 🌱 I’m currently learning **C, C++, Java and Python**
 
-- 👨‍💻 All of my projects are available [here](https://github.com/kelexine?tab=repositories)
+- 👨‍💻 Visite website for more [here](https://kelexine.is-a.dev)
 
 - 📫 How to reach me **frankiekelechi@gmail.com**
 
