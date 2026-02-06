@@ -1,5 +1,5 @@
 <h1 align="center">Hi There 👋, I'm Franklin Kelechi</h1>
-<h3 align="center">An Android developer from Nigeria</h3>
+<h3 align="center">A Developer from Nigeria</h3>
 
 <p align="left"> <a href="https://twitter.com/kelechionogwu" target="blank"><img src="https://img.shields.io/twitter/follow/kelechionogwu?logo=twitter&style=for-the-badge" alt="kelechionogwu" /></a> </p>
 
