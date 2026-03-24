@@ -11,7 +11,7 @@
 ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝
 ```
 
-**`Franklin Kelechi`** · CS Student · Builder · Lagos, Nigeria
+**`Franklin Kelechi`** · CS Student · Builder · TheVoid
 
 [![GitHub followers](https://img.shields.io/github/followers/kelexine?style=flat-square&color=f0a500&labelColor=0a0a0b&label=followers)](https://github.com/kelexine?tab=followers)
 [![Twitter Follow](https://img.shields.io/twitter/follow/kelechionogwu?style=flat-square&color=1dcfaa&labelColor=0a0a0b)](https://twitter.com/kelechionogwu)
@@ -24,7 +24,7 @@
 
 ### `$ whoami`
 
-> CS student turning abstract systems ideas into production-grade infrastructure.  
+> CS student turning abstract systems ideas into infrastructure.  
 > Building autonomous AI agents, deep learning frameworks, and open-source tooling.  
 > End goal: **Cybersecurity**. Current weapon of choice: 🦀 **Rust**.
 
@@ -33,7 +33,7 @@ status:     actively building
 languages:  Rust · TypeScript · Go · Python · C/C++ · Java
 os:         Pop!_OS
 loc:        61,000+ across active projects
-location:   Lagos, Nigeria
+location:   TheVoid
 ```
 
 ---
@@ -44,14 +44,6 @@ location:   Lagos, Nigeria
 <tr>
 <td width="50%">
 
-**[Kelly/soma](https://github.com/kelexine/soma)**  
-`Rust` · ~8,280 LOC · 42 tests
-
-Autonomous AI agent built in one day. 16-crate workspace with SOUL.md identity, affect engine, Big Five personality model, dream consolidation, injection detection and stage-gated autonomy.
-
-</td>
-<td width="50%">
-
 **[gem2claude](https://github.com/kelexine/gem2claude)**  
 `Rust` · ~11,430 LOC · 61 tests
 
@@ -60,14 +52,6 @@ Production proxy translating Claude API → Gemini API. SSE streaming, vision su
 </td>
 </tr>
 <tr>
-<td width="50%">
-
-**MOSAIC**  
-`Rust` · ~30,453 LOC
-
-From-scratch deep learning framework. Custom autodiff DAG, Intel GPU acceleration via oneAPI/Level Zero FFI, 3-tier persistent memory, 7.95M parameter AgentSubstrate model.
-
-</td>
 <td width="50%">
 
 **[tiny11-automated](https://github.com/kelexine/tiny11-automated)**  
