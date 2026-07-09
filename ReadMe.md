@@ -24,15 +24,14 @@
 
 ### `$ whoami`
 
-> CS student turning abstract systems ideas into infrastructure.  
+> A CS student turning weird ideas into code.  
 > Building autonomous AI agents, deep learning frameworks, and open-source tooling.  
-> End goal: **Cybersecurity**. Current weapon of choice: 🦀 **Rust**.
+> End goal: **ML Researcher**. Current weapon of choice: 🦀 **Rust**.
 
 ```yaml
-status:     actively building
-languages:  Rust · TypeScript · Go · Python · C/C++ · Java
-os:         Pop!_OS
-loc:        61,000+ across active projects
+status:     Breaking Stuffs
+languages:  Rust · TypeScript · Go · Python · C/C++
+os:         CachyOS
 location:   TheVoid
 ```
 
@@ -41,16 +40,6 @@ location:   TheVoid
 ### `$ ls ~/projects`
 
 <table>
-<tr>
-<td width="50%">
-
-**[gem2claude](https://github.com/kelexine/gem2claude)**  
-`Rust` · ~11,430 LOC · 61 tests
-
-Production proxy translating Claude API → Gemini API. SSE streaming, vision support, context caching, Prometheus metrics. Built in ~48 hours.
-
-</td>
-</tr>
 <tr>
 <td width="50%">
 
@@ -92,7 +81,6 @@ Automated CI/CD builder for stripped Windows 11 images. GitHub Actions pipeline,
 ![Python](https://img.shields.io/badge/Python-f0a500?style=flat-square&logo=python&logoColor=0a0a0b)
 ![C](https://img.shields.io/badge/C-1dcfaa?style=flat-square&logo=c&logoColor=0a0a0b)
 ![C++](https://img.shields.io/badge/C++-378add?style=flat-square&logo=cplusplus&logoColor=white)
-![Java](https://img.shields.io/badge/Java-e24b4a?style=flat-square&logo=openjdk&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-f0a500?style=flat-square&logo=linux&logoColor=0a0a0b)
 ![GCP](https://img.shields.io/badge/GCP-378add?style=flat-square&logo=googlecloud&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-1dcfaa?style=flat-square&logo=android&logoColor=0a0a0b)
@@ -115,5 +103,5 @@ Automated CI/CD builder for stripped Windows 11 images. GitHub Actions pipeline,
 ---
 
 <div align="center">
-<sub><code>"One man's crappy software is another man's full-time job." — kelexine</code></sub>
+<sub><code>"🙄" — kelexine</code></sub>
 </div>
