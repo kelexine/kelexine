@@ -127,14 +127,3 @@ Feature-rich CLI empowering AI agents with identities, submolt moderation, and a
 <div align="center">
 <sub><code>"🙄" — kelexine</code></sub>
 </div>
-[![Twitter](https://img.shields.io/badge/twitter-@kelechionogwu-1dcfaa?style=flat-square&logo=twitter&logoColor=white&labelColor=0a0a0b)](https://twitter.com/kelechionogwu)
-[![Telegram](https://img.shields.io/badge/telegram-@kelexine2-378add?style=flat-square&logo=telegram&logoColor=white&labelColor=0a0a0b)](https://t.me/kelexine2)
-[![Blog](https://img.shields.io/badge/blog-kelexine.is--a.dev-f0a500?style=flat-square&logo=firefox&logoColor=white&labelColor=0a0a0b)](https://kelexine.is-a.dev)
-
-</div>
-
----
-
-<div align="center">
-<sub><code>"🙄" — kelexine</code></sub>
-</div>
