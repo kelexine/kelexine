@@ -47,12 +47,28 @@ location:   TheVoid
 
 <table>
 <tr>
-<td width="50%">
+<td width="33%" valign="top">
 
 **[tiny11-automated](https://github.com/kelexine/tiny11-automated)**  
-`PowerShell · Python` · MIT
+`PowerShell · Python`
 
 Automated CI/CD builder for stripped Windows 11 images. GitHub Actions pipeline, SourceForge distribution with high weekly download volume.
+
+</td>
+<td width="33%" valign="top">
+
+**[loc-rs](https://github.com/kelexine/loc-rs)**  
+`Rust`
+
+Advanced lines-of-code counter with function extraction, git integration, and parallel processing.
+
+</td>
+<td width="33%" valign="top">
+
+**[moltbook-cli](https://github.com/kelexine/moltbook-cli)**  
+`Rust`
+
+Feature-rich CLI empowering AI agents with identities, submolt moderation, and automated community engagement.
 
 </td>
 </tr>
@@ -65,7 +81,7 @@ Automated CI/CD builder for stripped Windows 11 images. GitHub Actions pipeline,
 <div align="center">
 
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=kelexine&show_icons=true&theme=dark&bg_color=0a0a0b&title_color=f0a500&icon_color=1dcfaa&text_color=e8e4d9&border_color=232325&hide_border=false&ring_color=f0a500" alt="kelexine stats" />
-<img height="165" src="https://github-readme-streak-stats.herokuapp.com/?user=kelexine&theme=dark&background=0a0a0b&stroke=f0a500&ring=1dcfaa&fire=f0a500&currStreakLabel=f0a500&sideNums=e8e4d9&sideLabels=6b6760&dates=6b6760&border=232325" alt="kelexine streak" />
+<img height="165" src="https://streak-stats.demolab.com/?user=kelexine&theme=dark&background=0a0a0b&stroke=f0a500&ring=1dcfaa&fire=f0a500&currStreakLabel=f0a500&sideNums=e8e4d9&sideLabels=6b6760&dates=6b6760&border=232325" alt="kelexine streak" />
 
 </div>
 
@@ -100,6 +116,17 @@ Automated CI/CD builder for stripped Windows 11 images. GitHub Actions pipeline,
 <div align="center">
 
 [![Email](https://img.shields.io/badge/email-frankiekelechi@gmail.com-f0a500?style=flat-square&logo=gmail&logoColor=white&labelColor=0a0a0b)](mailto:frankiekelechi@gmail.com)
+[![Twitter](https://img.shields.io/badge/twitter-@kelechionogwu-1dcfaa?style=flat-square&logo=twitter&logoColor=white&labelColor=0a0a0b)](https://twitter.com/kelechionogwu)
+[![Telegram](https://img.shields.io/badge/telegram-@kelexine2-378add?style=flat-square&logo=telegram&logoColor=white&labelColor=0a0a0b)](https://t.me/kelexine2)
+[![Blog](https://img.shields.io/badge/blog-kelexine.is--a.dev-f0a500?style=flat-square&logo=firefox&logoColor=white&labelColor=0a0a0b)](https://kelexine.is-a.dev)
+
+</div>
+
+---
+
+<div align="center">
+<sub><code>"🙄" — kelexine</code></sub>
+</div>
 [![Twitter](https://img.shields.io/badge/twitter-@kelechionogwu-1dcfaa?style=flat-square&logo=twitter&logoColor=white&labelColor=0a0a0b)](https://twitter.com/kelechionogwu)
 [![Telegram](https://img.shields.io/badge/telegram-@kelexine2-378add?style=flat-square&logo=telegram&logoColor=white&labelColor=0a0a0b)](https://t.me/kelexine2)
 [![Blog](https://img.shields.io/badge/blog-kelexine.is--a.dev-f0a500?style=flat-square&logo=firefox&logoColor=white&labelColor=0a0a0b)](https://kelexine.is-a.dev)
