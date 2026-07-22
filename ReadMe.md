@@ -15,7 +15,9 @@
 ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝
 ```
 
-**`Franklin Kelechi`** · CS Student · Builder · TheVoid
+**`Franklin Kelechi`** · CS Student · Builder
+
+I live in **TheVoid**
 
 [![GitHub followers](https://img.shields.io/github/followers/kelexine?style=flat-square&color=f0a500&labelColor=0a0a0b&label=followers)](https://github.com/kelexine?tab=followers)
 [![Twitter Follow](https://img.shields.io/twitter/follow/kelechionogwu?style=flat-square&color=1dcfaa&labelColor=0a0a0b)](https://twitter.com/kelechionogwu)
